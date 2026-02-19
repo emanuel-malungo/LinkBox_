@@ -5,15 +5,16 @@ import Header from "./Header"
 
 export default function Container({ children }: { children: React.ReactNode }) {
     return (
-        <div className="min-h-screen bg-linear-to-br from-foreground via-foreground to-[#7C3AED]">
+        <div className="min-h-screen bg-foreground">
             <Header />
-            <div className="flex container mx-auto mt-8" >
-                <Sidebar />
-                <main className="ml-64 w-full">
-                    {children}
-                </main>
+            <div className="container mx-auto pt-24 px-4">
+                <div className="flex gap-6">
+                    <Sidebar />
+                    <main className="flex-1">
+                        {children}
+                    </main>
+                </div>
             </div>
-           
         </div>
     )
 }

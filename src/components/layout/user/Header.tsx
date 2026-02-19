@@ -13,7 +13,7 @@ export default function Header() {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
     return (
-        <header className="w-full py-4 bg-[#1D1B2B] border-b border-white/10">
+        <header className="fixed top-0 left-0 right-0 z-50 w-full py-4 bg-[#1D1B2B] border-b border-white/10">
             <div className="container mx-auto flex items-center justify-between px-4">
                 <div className="flex items-center gap-8" >
                     <div className="flex items-center space-x-2">
