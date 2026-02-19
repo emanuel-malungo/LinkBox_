@@ -8,8 +8,8 @@ import { Lineicons } from '@lineiconshq/react-lineicons';
 import Link from "next/link";
 
 export default function Signup() {
-    return (
-        <div className="min-h-screen flex flex-col items-center justify-center bg-linear-to-br from-foreground via-foreground to-[#7C3AED]">
+        return (
+            <div className="min-h-screen flex flex-col items-center justify-center bg-linear-to-br from-foreground via-foreground to-[#7C3AED]">
             <Card className="w-full max-w-md p-6 bg-[#1D1B2B] rounded-lg shadow-lg border-none">
                 <div>
                     <Image src={icon} alt="Icon" className="w-24 h-24 mb-4 mx-auto" priority />
