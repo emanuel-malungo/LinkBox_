@@ -1,10 +1,10 @@
-import Header from "@/src/components/layout/user/Header";
+import Container from "@/src/components/layout/user/Container";
 
 export default function Dashboard() {
     return (
-        <div className="min-h-screen bg-linear-to-br from-foreground via-foreground to-[#7C3AED]">
-            <Header />
-            <h1 className="text-3xl font-bold text-white">Bem-vindo ao Dashboard!</h1>
-        </div>
+        <Container>
+            <h1 className="text-3xl font-bold text-white mb-6">Dashboard</h1>
+            <p className="text-white/80">Bem-vindo ao seu dashboard! Aqui você pode gerenciar seus links, categorias e visualizar suas estatísticas.</p>
+        </Container>
     )
 }
