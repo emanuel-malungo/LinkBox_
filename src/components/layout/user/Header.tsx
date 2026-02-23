@@ -8,9 +8,13 @@ import icon2 from "@/src/assets/images/icon2.png";
 import { Lineicons } from '@lineiconshq/react-lineicons';
 import { Search1Bulk, Home2Bulk, Link2AngularRightBulk, Folder1Bulk } from '@lineiconshq/free-icons';
 import { Button } from "@/src/components/ui/button";
+import NewLinkModal from "@/src/components/modals/NewLinkModal";
+import NewCategoryModal from "@/src/components/modals/NewCategoryModal";
 
 export default function Header() {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [isNewLinkModalOpen, setIsNewLinkModalOpen] = useState(false);
+    const [isNewCategoryModalOpen, setIsNewCategoryModalOpen] = useState(false);
 
     const avatarUrl = `https://avatars.githubusercontent.com/u/147757794?s=400&u=2b5f19c75d05e46e21b822bcf87059a961fbf2c7&v=4`;
 
@@ -40,16 +44,22 @@ export default function Header() {
                             </Link>
                         </li>
                         <li>
-                            <Link href="/user/profile" className="flex items-center gap-2 text-white hover:text-primary transition-colors">
+                            <button 
+                                onClick={() => setIsNewLinkModalOpen(true)}
+                                className="flex items-center gap-2 text-white hover:text-primary transition-colors"
+                            >
                                 <Lineicons icon={Link2AngularRightBulk} className="w-5 h-5" />
                                 Links
-                            </Link>
+                            </button>
                         </li>
                         <li>
-                            <Link href="/user/settings" className="flex items-center gap-2 text-white hover:text-primary transition-colors">
+                            <button 
+                                onClick={() => setIsNewCategoryModalOpen(true)}
+                                className="flex items-center gap-2 text-white hover:text-primary transition-colors"
+                            >
                                 <Lineicons icon={Folder1Bulk} className="w-5 h-5" />
                                 Categorias
-                            </Link>
+                            </button>
                         </li>
                     </ul>
                     <div className="relative">
@@ -78,6 +88,16 @@ export default function Header() {
                     </div>
                 </div>
             </div>
+
+            {/* Modais */}
+            <NewLinkModal 
+                isOpen={isNewLinkModalOpen}
+                onClose={() => setIsNewLinkModalOpen(false)}
+            />
+            <NewCategoryModal 
+                isOpen={isNewCategoryModalOpen}
+                onClose={() => setIsNewCategoryModalOpen(false)}
+            />
         </header>
     )
 }
