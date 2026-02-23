@@ -1,6 +1,9 @@
+import Image from "next/image";
+import icon from "@/src/assets/images/icon2.png";
+
 export function Loading() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-linear-to-br from-foreground via-foreground to-[#7C3AED]/20">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-linear-to-br from-foreground via-foreground to-[#7C3AED]">
       <div className="relative w-24 h-24">
         {/* Spinner exterior */}
         <div className="absolute inset-0 rounded-full border-4 border-[#7C3AED]/20"></div>
@@ -11,7 +14,7 @@ export function Loading() {
         {/* Logo no centro */}
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="w-12 h-12 rounded-full bg-[#7C3AED]/20 flex items-center justify-center">
-            <span className="text-[#7C3AED] font-bold text-sm">LB</span>
+            <Image src={icon} alt="Icon" className="w-6 h-6" priority />
           </div>
         </div>
       </div>

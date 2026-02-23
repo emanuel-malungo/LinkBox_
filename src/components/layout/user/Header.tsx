@@ -12,6 +12,8 @@ import { Button } from "@/src/components/ui/button";
 export default function Header() {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
+    const avatarUrl = `https://avatars.githubusercontent.com/u/147757794?s=400&u=2b5f19c75d05e46e21b822bcf87059a961fbf2c7&v=4`;
+
     return (
         <header className="fixed top-0 left-0 right-0 z-50 w-full py-4 bg-[#1D1B2B] border-b border-white/10">
             <div className="container mx-auto flex items-center justify-between px-4">
@@ -53,9 +55,9 @@ export default function Header() {
                     <div className="relative">
                         <Button 
                             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                            className="bg-primary border-2 border-white text-black hover:bg-gray-200"
+                            className="bg-primary border-2 border-white w-10 h-10 p-0 overflow-hidden rounded-full"
                         >
-                            <Image src={icon2} alt="User Avatar" className="w-4 h-8 rounded-full" />
+                            <Image src={avatarUrl} alt="User Avatar" width={40} height={40} className="w-full h-full object-cover" />
                         </Button>
                         {isDropdownOpen && (
                             <div className="absolute right-0 mt-2 w-48 bg-[#2A2839] border border-white/10 rounded-lg shadow-lg z-50">
