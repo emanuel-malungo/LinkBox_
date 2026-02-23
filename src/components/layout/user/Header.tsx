@@ -5,11 +5,11 @@ import Image from "next/image";
 import { useState } from "react";
 import {Input} from "@/src/components/ui/input";
 import icon2 from "@/src/assets/images/icon2.png";
-import { Lineicons } from '@lineiconshq/react-lineicons';
-import { Search1Bulk, Home2Bulk, Link2AngularRightBulk, Folder1Bulk } from '@lineiconshq/free-icons';
 import { Button } from "@/src/components/ui/button";
+import { Lineicons } from '@lineiconshq/react-lineicons';
 import NewLinkModal from "@/src/components/modals/NewLinkModal";
 import NewCategoryModal from "@/src/components/modals/NewCategoryModal";
+import { Search1Bulk, Home2Bulk, Link2AngularRightBulk, Folder1Bulk } from '@lineiconshq/free-icons';
 
 export default function Header() {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
