@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Card } from "@/src/components/ui/card";
 import { Input } from "@/src/components/ui/input";
+import { RandomSquaresBackground } from "@/src/components/ui/random-squares-background";
 import icon from "@/src/assets/images/icon.png";
 import { Button } from "@/src/components/ui/button";
 import { Envelope1Bulk, Locked1Bulk } from '@lineiconshq/free-icons';
@@ -9,8 +10,9 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-linear-to-br from-foreground via-foreground to-[#7C3AED]">
-        <Card className="w-full max-w-md p-6 bg-[#1D1B2B] rounded-lg shadow-lg border-none">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-linear-to-br from-foreground via-foreground to-[#7C3AED] relative overflow-hidden">
+        <RandomSquaresBackground />
+        <Card className="w-full max-w-md p-6 bg-[#1D1B2B] rounded-lg shadow-lg border-none relative z-10">
             <div>
               <Image src={icon} alt="Icon" className="w-24 h-24 mb-4 mx-auto" priority />
               <p className="text-center text-lg text-white/55 mb-6">
