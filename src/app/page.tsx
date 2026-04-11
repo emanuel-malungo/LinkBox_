@@ -1,11 +1,10 @@
 import Image from "next/image";
 import { Card } from "@/src/components/ui/card";
-import { Input } from "@/src/components/ui/input";
 import { RandomSquaresBackground } from "@/src/components/ui/random-squares-background";
 import icon from "@/src/assets/images/icon.png";
 import { Button } from "@/src/components/ui/button";
+import Input from "@/src/components/common/Input";
 import { Envelope1Bulk, Locked1Bulk } from '@lineiconshq/free-icons';
-import { Lineicons } from '@lineiconshq/react-lineicons';
 import Link from "next/link";
 
 export default function Home() {
@@ -21,26 +20,17 @@ export default function Home() {
             </div>
             <div>
               <div className="relative mb-4" >
-                <Lineicons 
-                  icon={Envelope1Bulk} 
-                  className="w-5 h-5 text-white/55 mb-2 mx-auto absolute top-4 left-3" 
-                />
                 <Input 
                   type="email"
-                  placeholder="linkbox26@gmail.com" 
-                  className="w-full pl-10 bg-white/5 border-white/10 text-white placeholder:text-white/40 h-12" 
+                  placeholder="linkbox26@gmail.com"
+                  icon={Envelope1Bulk}
                 />
               </div>
-              <div className="relative" >
-                <Lineicons 
-                  icon={Locked1Bulk} 
-                  className="w-5 h-5 text-white/55 mb-2 mx-auto absolute top-4 left-3" 
-                />
-                
+              <div className="relative mb-4" >
                 <Input 
                   type="password"
-                  placeholder="xxxxxxxxxx" 
-                  className="w-full pl-10 bg-white/5 border-white/10 text-white placeholder:text-white/40 h-12" 
+                  placeholder="xxxxxxxxxx"
+                  icon={Locked1Bulk}
                 />
               </div>
               <div className="flex justify-end" >
