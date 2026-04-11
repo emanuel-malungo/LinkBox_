@@ -44,7 +44,7 @@ export function RandomSquaresBackground({
     return (
         <>
             {/* Quadrados aleatórios no fundo */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
                 {randomSquares.map((square) => (
                     <div
                         key={`square-${square.id}`}
@@ -63,7 +63,7 @@ export function RandomSquaresBackground({
             </div>
 
             {/* Gradiente radial decorativo */}
-            <div className="absolute inset-0 bg-radial-gradient from-purple-500/10 via-transparent to-transparent pointer-events-none opacity-50" />
+            <div className="absolute inset-0 bg-radial-gradient from-purple-500/10 via-transparent to-transparent pointer-events-none opacity-50 z-0" />
         </>
     );
 }
